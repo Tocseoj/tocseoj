@@ -34,7 +34,7 @@ fi
 
 # Always get the latest version of the Brewfile
 echo " downloading Brewfile..."
-curl -fsSL https://raw.githubusercontent.com/Tocseoj/tocseoj/Brewfile > ./Brewfile || exit
+curl -fsSL https://raw.githubusercontent.com/Tocseoj/tocseoj/main/Brewfile > ./Brewfile || exit
 
 echo " done!"
 exit
