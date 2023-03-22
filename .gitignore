@@ -1,0 +1,7 @@
+*.lock
+*.lock.json
+
+# OS
+.DS_Store
+Desktop.ini
+Thumbs.db

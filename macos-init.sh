@@ -36,9 +36,9 @@ fi
 echo " downloading Brewfile..."
 curl -fsSL https://raw.githubusercontent.com/Tocseoj/tocseoj/main/Brewfile > ./Brewfile || exit
 
-echo " done!"
-exit
-
 # install bundle (needs testing)
 brew tap Homebrew/bundle
 brew bundle
+
+echo " done!"
+exit
