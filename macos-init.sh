@@ -52,12 +52,13 @@ if [[ "$getZshrc" =~ ^[Yy]$ ]]; then
   curl -fsSL https://raw.githubusercontent.com/Tocseoj/tocseoj/main/zshrc > ~/.zshrc || exit
 fi
 
-echo " done!"
-exit
-
-# oh-my-zsh instal; while keeping zshrc
+# fresh oh-my-zsh install; while keeping zshrc
+# probably dont need to re-install every time, but works for now
+rm -rf ~/.oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --keep-zshrc
 
+echo " done!"
+exit
 
 ###
 # Personal Configurations
@@ -67,18 +68,48 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 #  jumpcut config
 #  karabiner elements config
 #  iterm2 config
-# zsh config (ZSH_THEME="strug")
-# vscode config (`code` cli command)
-# chrome config
-# firefox config
-# tower config
-# OnyX/osx config
+#  zsh config (ZSH_THEME="strug")
+#  vscode config (`code` cli command)
+#  chrome config
+#  firefox config
+#  tower config
+#  1password config
+# [] keyboard clean tool
+# [] postman?
+# [] sequel ace?
+# [] bbedit?
+# OnyX
+# - Screenshot > Path > /Users/jmarshall/Pictures/Screenshots/
+# - Finder > Show Hidden Files
+# - Desktop Image
+# - Safari > Show Develop Menu
+# - Profile Files???
+# osx config
+# - Dark Mode
+# - Control Bar has lock button
+# - Hey Siri is off
+# - Dock > Hiding
+# - Default Browser > Chrome
+# - Don't rearrange spaces based on most recent use
+# - (the rest should come from iCloud?)
 
 ###
 # Work Setup
 ###
 
-# virtualbox
-# vagrant config
-# docker config
-# slack
+#  virtualbox
+#  vagrant config
+#  docker config
+#  slack
+# [] microsoft remote desktop
+# [] Filezilla
+# [] dymo?
+
+###
+# Non-work Setup
+###
+
+# [] discord
+# [] gimp
+# [] steam
+# [] chrome remote desktop
