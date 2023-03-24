@@ -75,7 +75,7 @@ exit
 #  tower config
 #  1password config
 # [] keyboard clean tool
-# [] postman?
+# [] insomnia
 # [] sequel ace?
 # [] bbedit?
 # OnyX
