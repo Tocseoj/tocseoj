@@ -53,9 +53,17 @@ if [[ "$getZshrc" =~ ^[Yy]$ ]]; then
 fi
 
 # fresh oh-my-zsh install; while keeping zshrc
-# probably dont need to re-install every time, but works for now
-rm -rf ~/.oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --keep-zshrc
+# ask if we should reinstall oh-my-zsh
+if [ -d ~/.oh-my-zsh ]; then
+  echo " ~/.oh-my-zsh already exists, re-installing will remove any changes in ~/.oh-my-zsh/custom"
+  read -p " Would you like to reinstall?  (y/N)  " -r installOhMyZsh
+fi
+installOhMyZsh=${installOhMyZsh:-N}
+if [[ "$installOhMyZsh" =~ ^[Yy]$ ]]; then
+  echo " installing oh-my-zsh..."
+  rm -rf ~/.oh-my-zsh
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --keep-zshrc
+fi
 
 echo " done!"
 exit
